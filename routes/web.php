@@ -12,10 +12,10 @@
 */
 
 //Route::get('/', ['as'=>'home.index', 'uses'=>'HomeController@index']);
-Route::get('hello/{name?}',function($name='Everybody'){
+Route::get('hello/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
     return'Hello,'.$name;
+}]);
 
-});
 
 Route::get('/',function(){
     returnview('welcome');

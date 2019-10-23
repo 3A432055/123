@@ -11,14 +11,16 @@
 */
 
 Route::get('hello/{name?}',function($name='handsome Hao'){
-
     return'Hello,'.$name;
-
 });
 
-Route::get('/',function(){
-    returnview('welcome');
+Route::get('deshboard',function (){
+    return 'deshboard';
 });
+
+Route::get('say/{name?}',['as'=>'hello.index', function($name = 'Everybody'){
+    return view('welcome');
+}]);
 
 Route::get('/',function(){
     returnredirect('welcome');

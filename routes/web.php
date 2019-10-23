@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', ['as'=>'home.index', 'uses'=>'HomeController@index']);
+Route::get('hello/{name}',function($name){
+    return'Hello,'.$name;
+
 });
 
 Route::get('/',function(){
-    return'welcome';
+    returnview('welcome');
 });
-
 
 Route::get('/',function(){
     returnredirect('welcome');
 });
-

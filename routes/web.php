@@ -12,15 +12,15 @@
 */
 
 //Route::get('/', ['as'=>'home.index', 'uses'=>'HomeController@index']);
-Route::get('hello/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
-    return'Hello,'.$name;
+Route::get('say/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
+    return'Hello, '.$name;
 }]);
 
 
 Route::get('/',function(){
-    returnview('welcome');
+    return view('welcome');
 });
 
 Route::get('/',function(){
-    returnredirect('welcome');
+    return redirect('welcome');
 });

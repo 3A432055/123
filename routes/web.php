@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,16 +10,16 @@
 |
 */
 
-//Route::get('/', ['as'=>'home.index', 'uses'=>'HomeController@index']);
-Route::get('say/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
-    return'Hello, '.$name;
-}]);
+Route::get('hello/{name?}',function($name='handsome Hao'){
 
+    return'Hello,'.$name;
 
-Route::get('/',function(){
-    return view('welcome');
 });
 
 Route::get('/',function(){
-    return redirect('welcome');
+    returnview('welcome');
+});
+
+Route::get('/',function(){
+    returnredirect('welcome');
 });
